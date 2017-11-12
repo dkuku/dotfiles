@@ -1,0 +1,3 @@
+command! pocket -nargs=* :open javascript:(function(){window.open('https://getpocket.com/edit?url='+escape(window.location.href)+'&tags=<args>', '_self');})()
+
+
