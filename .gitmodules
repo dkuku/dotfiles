@@ -1,3 +1,11 @@
 [submodule "dotdrop"]
 	path = dotdrop
 	url = https://github.com/deadc0de6/dotdrop.git
+
+[submodule "dotfiles/tmux/plugins/tpm"]
+	path = dotfiles/tmux/plugins/tpm
+  url = https://github.com/tmux-plugins/tpm.git
+
+[submodule "tpm"]
+	path = dotfiles/vim
+	url = https://github.com/dkuku/webvim.git
