@@ -1,0 +1,57 @@
+actions:
+  tmux_plugins: sh '~/.tmux/plugins/tpm/tpm'
+  vimplug: vim +PlugInstall +qall
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_by_default: false
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+dotfiles:
+  d_tmux:
+    dst: ~/.tmux
+    src: tmux
+  d_vim:
+    actions:
+    - vimplug
+    dst: ~/.vim
+    src: vim
+  f_config:
+    dst: ~/.i3/config
+    src: i3/config
+  f_ctags:
+    dst: ~/.ctags
+    src: ctags
+  f_extend.xresources:
+    dst: ~/.extend.Xresources
+    src: extend.Xresources
+  f_tmux.conf:
+    actions:
+    - tmux_plugins
+    dst: ~/.tmux.conf
+    src: tmux.conf
+  f_vimrc:
+    dst: ~/.vimrc
+    src: vimrc
+  f_xresources:
+    dst: ~/.Xresources
+    src: Xresources
+  f_zshrc:
+    dst: ~/.zshrc
+    src: zshrc
+profiles:
+  dku-xps:
+    dotfiles:
+    - f_ctags
+    - f_tmux.conf
+    - f_vimrc
+    - f_config
+    - f_zshrc
+    - f_xresources
+    - f_extend.xresources
+    - d_vim
+    - d_tmux
